@@ -58,7 +58,15 @@ if (isset($_GET['id'])) {
         } else {
             echo "<div class='alert' id='errorAlert'>Something went wrong. Please try again later</div>";
         }
+
+        if ($pet["status"] === 0) {
+            $petStSql =  "UPDATE `pets` SET `status` = 1 WHERE `id` = {$petId}";            
+            if(!mysqli_query($conn, $petStSql)) {
+                echo "Error updating pet status: " . mysqli_error($conn);
+            };
         }
+    }
+      
     }
 
 
