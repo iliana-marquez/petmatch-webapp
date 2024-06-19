@@ -27,9 +27,6 @@ if (isset($_GET['id'])) {
     $pResult = mysqli_query($conn, $pSql);
     $pet = mysqli_fetch_assoc($pResult);
 
-
-
-
     if (isset($_POST["adopt"])) {
         $fk_user = $id;
         $fk_pet = $petId;
@@ -47,9 +44,12 @@ if (isset($_GET['id'])) {
             $locationError = "Please enter a valid location format";
         }
 
-        $adoptSql= "INSERT INTO `adoptions`(`fk_user`, `fk_pet`, `adoption_date`, `adoption_location`) VALUES ('{$fk_user}','{$fk_pet}','{$adoption_date}','{$adoption_location}')";
-
+        $adoptSql= "INSERT INTO `adoptions`(`fk_user`, `fk_pet`, `adoption_date`, `adoption_location`) VALUES ('{$fk_user}','{$fk_pet}','{$adoption_date}','{$adoption_location}')";      
+        $sqlPetUpdate = "UPDATE `pets` SET `status` = 1, `pet_location` = '{$adoption_location}' WHERE `id` = {$petId}";
+          
         if(mysqli_query($conn, $adoptSql)){
+            mysqli_query($conn, $sqlPetUpdate);   
+
             echo "<div class='alert' id='successAlert'><h1>Congratulations, {$person['first_name']}! You just adopted {$pet['pet_name']}!</h1></div>";
 
             $adoption_location = "";
