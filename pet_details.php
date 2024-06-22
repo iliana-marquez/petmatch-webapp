@@ -69,8 +69,10 @@ if(isset($_GET["id"])){
 
         <?php if (isset($_SESSION["admn"])): ?>
             <div class='cardBotones'>
-            <a href='edit_pet.php?id=<?=$pet["id"]?>'><button>Update</button></a>
-            <a href='delete.php?id=<?=$pet["id"]?>'><button><i class='bx bxs-trash'></i> Delete</button></a>
+            <a href='edit_pet.php?id=<?=$pet["id"]?>'><button class="bttn">Update</button></a>
+            <a href='delete.php?id=<?=$pet["id"]?>'><button class="bttn"><i class='bx bxs-trash'></i> Delete</button></a>
+            <a href='pets.php'><button class="bttn">Go back</button></a>
+
         </div>
         <?php endif; ?>
 

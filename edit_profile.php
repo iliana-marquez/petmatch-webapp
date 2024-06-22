@@ -57,7 +57,7 @@ if (isset($_POST["update"])) {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = true;
         $emailError = "Please enter a valid email address";
-    } 
+    }
 
     if (empty($address)) {
         $error = true;
@@ -84,13 +84,13 @@ if (isset($_POST["update"])) {
     if (empty($date_of_birth)) {
         $error = true;
         $dateError = "Please enter your birth date";
-    } 
+    }
 
     if (!$error) {
 
-        if($_FILES["picture"]["error"] ==4 ){
+        if ($_FILES["picture"]["error"] == 4) {
             $sql = "UPDATE `users` SET `first_name` = '{$first_name}',`last_name` = '{$last_name}',`email` = '{$email}',`date_of_birth` = '{$date_of_birth}',`address` = '{$address}',`phone_number` = '{$phone_number}' WHERE `id` = {$id}";
-        }else{
+        } else {
             $sql = "UPDATE `users` SET `first_name` = '{$first_name}',`last_name` = '{$last_name}',`email` = '{$email}',`date_of_birth` = '{$date_of_birth}',`address` = '{$address}',`phone_number` = '{$phone_number}', `picture` = '{$picture[0]}' WHERE `id` = {$id}";
         }
 
@@ -98,7 +98,7 @@ if (isset($_POST["update"])) {
             echo "<div class='alert' id='successAlert'>Your profile has been updated!</div>";
 
             header("refresh: 3; url=$backLink");
-        } 
+        }
     }
 }
 ?>
@@ -116,50 +116,51 @@ if (isset($_POST["update"])) {
 
 <body>
     <?php require_once "components/navbar.php" ?>
-    
+
     <div class="editContainer">
         <div class="form">
             <div class="wrapperEdit">
-                <h1>Edit Profile</h1>
+                <h1>Edit your profile</h1>
                 <form method="post" enctype="multipart/form-data">
                     <div class="input-box">
                         <p>First Name</p>
-                        <input type="text" placeholder="* First Name" value="<?= $person["first_name"]; ?>" name="first_name"><i class='bx bxs-user'></i>
+                        <input type="text" placeholder="* First Name" value="<?= $person["first_name"]; ?>" name="first_name">
                         <p class="error"><?= $fnameError; ?></p>
                     </div>
                     <div class="input-box">
                         <p>Last Name</p>
-                        <input type="text" placeholder="* Last Name" value="<?= $person["last_name"]; ?>" name="last_name"><i class='bx bxs-user'></i>
+                        <input type="text" placeholder="* Last Name" value="<?= $person["last_name"]; ?>" name="last_name">
                         <p class="error"><?= $lnameError; ?></p>
                     </div>
                     <div class="input-box">
                         <p>Email</p>
-                        <input type="email" placeholder="* Email" value="<?= $person["email"]; ?>" name="email"><i class='bx bxs-envelope'></i>
+                        <input type="email" placeholder="* Email" value="<?= $person["email"]; ?>" name="email">
                         <p class="error"><?= $emailError; ?></p>
                     </div>
                     <div class="input-box">
                         <p>Address</p>
-                        <input type="text" placeholder="* Address" value="<?= $person["address"]; ?>" name="address"><i class='bx bxs-map'></i>
+                        <input type="text" placeholder="* Address" value="<?= $person["address"]; ?>" name="address">
                         <p class="error"><?= $addressError; ?></p>
                     </div>
                     <div class="input-box">
                         <p>Phone Number</p>
-                        <input type="text" placeholder="* Phone Number"value="<?= $person["phone_number"]; ?>" name="phone_number"><i class='bx bxs-phone'></i></i>
+                        <input type="text" placeholder="* Phone Number" value="<?= $person["phone_number"]; ?>" name="phone_number">
                         <p class="error"><?= $phoneError; ?></p>
                     </div>
-                    <div class="input-box">
-                        <p>Birth date</p>
-                        <input type="date" value="<?= $person["date_of_birth"]; ?>" name="date_of_birth">
+
+                    <div class="input-box-date" style="height: 50px;">
+                        <label for="date" class="custom-date" style="padding-left: .5rem;">Date of Birth: </label>
+                        <input id="date" type="date" value="<?= $person["date_of_birth"]; ?>" name="date_of_birth">
                         <p class="error"><?= $dateError; ?></p>
                     </div>
-                    <div class="input-box">
-                        <p>Upload or update picture</p>
+
+                    <div class="input-box" style="height: 50px;">
+                        <label for="file-upload" class="input custom-file-upload ">Upload | Update profile picture <i class='bx bx-image-add'></i></label>
                         <input id="file-upload" type="file" name="picture">
-                        <label for="file-upload" class=""><i class='bx bx-image-add'></i></label>
                     </div>
                     <div class="bttn-section">
                         <button class="bttn" type="submit" name="update">Update Profile</button>
-                        <a href="<?= $backLink; ?>"><button class="bttn" type="button">Go Back</button></a>                      
+                        <a href="<?= $backLink; ?>"><button class="bttn" type="button">Go Back</button></a>
                     </div>
 
                 </form>
@@ -177,4 +178,5 @@ if (isset($_POST["update"])) {
     </footer>
 
 </body>
+
 </html>

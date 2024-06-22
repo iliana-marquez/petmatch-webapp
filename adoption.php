@@ -86,7 +86,7 @@ if (isset($_GET['id'])) {
 
     <?php require_once "./components/navbar.php" ?>
 
-    <div class="editContainer">
+    <div class="editContainer" style="display: grid; place-items: center;" >
         <form method="POST">
             <div class="wrapperEdit">
                 <h1 style="text-align: center;">Just one input away for adopting!</h1>

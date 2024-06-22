@@ -179,13 +179,13 @@ if (isset($_POST["register"])) {
                             <input type="text" placeholder="* Phone Number" name="phone_number"><i class='bx bxs-phone'></i></i>
                             <p class="error"><?= $phoneError; ?></p>
                         </div>
-                        <div class="input-box">
-                            <label for="date" class="custom-date">Date of Birth</label>
+                        <div class="input-box-date">
+                            <label for="date" class="custom-date">* Date of Birth: </label>
                             <input id="date" type="date" name="date_of_birth">
                             <p class="error"><?= $dateError; ?></p>
                         </div>
                         <div class="input-box">
-                            <label for="file-upload">Upload profile picture</label>
+                            <label for="file-upload" class="input custom-file-upload ">Upload profile picture <i class='bx bx-image-add'></i></label>
                             <input id="file-upload" type="file" name="picture">
                         </div>
                     </div>
@@ -207,6 +207,21 @@ if (isset($_POST["register"])) {
             <a href="#">Contact</a>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('file-upload').addEventListener('change', function (){
+           let fileName = this.files[0].name; //get the name of the selcted file
+           let label = document.querySelector('label[for="file-upload"]'); // Get the label associated with the file input
+           label.innerHTML = fileName + '<i class="bx bx-image-add"></i>'; // Update the label text with the file name and icon
+            label.classList.add('file-chosen'); // Add the class to change the text color to white
+        }); 
+        // document.getElementById('date').addEventListener('change', funtion(){
+        //     let uDate = this.date
+
+        // });
+        //     console.log (fileName);
+        // });
+    </script>
 </body>
 
 </html>

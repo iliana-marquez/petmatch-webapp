@@ -10,7 +10,7 @@ if ($id) {
 <header>
     <img class="logo" src="images/logo.svg" alt="logo">
     <a>Hi, <?= $person["first_name"]; ?>!</a>
-    <img class="img-thumbnail" style="border-radius: 50%; width: 50px; height: 50px; align: center;" src="images/<?= $person["picture"] ?>">
+    <img class="img-thumbnail" src="images/<?= $person["picture"] ?>">
 
     <nav class="navLinks">
         <?php if (isset($_SESSION["admn"])): ?>
