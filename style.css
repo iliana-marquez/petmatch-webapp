@@ -35,7 +35,6 @@ header{
 .logo{
     height: 60px;
     margin-right: auto;
-    cursor: pointer;
 }
 
 .navLinks {
@@ -173,7 +172,7 @@ footer{
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     padding: 1.5rem;
-    height: auto;
+    min-height:calc(100vh - 165px);
 }
 
 
@@ -181,13 +180,12 @@ footer{
     height: 45vh;
     min-width: 0;
     border-image: 1 fill linear-gradient( rgba(255, 255, 255, 0.001), rgba(255, 255, 255, 0.2),rgba(36, 37, 37, 0.8), rgba(36, 37, 42, 1));
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    overflow: hidden;
     padding: 1rem; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

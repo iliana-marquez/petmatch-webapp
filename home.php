@@ -19,16 +19,16 @@ $person = mysqli_fetch_assoc($result);
 
 $layout = "";
 
-$sqlPets = "SELECT * FROM `pets`";
+$sqlPets = "SELECT * FROM `pets` WHERE `status` = 0";
 
 if (isset($_GET['age'])) {
     if ($_GET['age'] === 'baby') {
-        $sqlPets = "SELECT * FROM `pets` WHERE `pet_age` BETWEEN 0 AND 3";
+        $sqlPets = "SELECT * FROM `pets` WHERE `pet_age` BETWEEN 0 AND 3 AND `status` = 0";
     } elseif ($_GET['age'] === 'junior') {
-        $sqlPets = "SELECT * FROM `pets` WHERE `pet_age` BETWEEN 4 AND 7";
+        $sqlPets = "SELECT * FROM `pets` WHERE `pet_age` BETWEEN 4 AND 7 AND `status` = 0";
     } elseif ($_GET['age'] === 'senior') {
-        $sqlPets = "SELECT * FROM `pets` WHERE `pet_age` >= 8";
-    } 
+        $sqlPets = "SELECT * FROM `pets` WHERE `pet_age` >= 8 AND `status` = 0";
+    }
 }
 
 $pResults = mysqli_query($conn, $sqlPets);
@@ -75,19 +75,22 @@ if (mysqli_num_rows($pResults) == 0) {
 
     <?php require_once "./components/navbar.php" ?>
 
-    <div class="searchWrapper">
+    <div class="searchWrapper" style="gap:1rem">
+
         <div class="buttons">
             <a href="home.php?age=baby"><button type="button">Baby Pets</button></a>
             <a href="home.php?age=junior"><button type="button">Junior Pets</button></a>
             <a href="home.php?age=senior"><button type="button">Senior Pets</button></a>
+            <a href="home.php"><button type="button">All</button></a>
         </div>
-        <form action="" method="post">
+
+        <form method="post">
             <div class="search-input">
-                <input type="text" placeholder="Search">
-                <button type="button"><i class='bx bxs-search-alt-2'></i></button>
-                
+                <input type="text" id="search" placeholder="Search for...">
+                <button type="submit"><i class='bx bxs-search-alt-2'></i></button>
             </div>
         </form>
+
     </div>
 
     <div class="grid">
