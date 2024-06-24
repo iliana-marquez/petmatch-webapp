@@ -225,12 +225,14 @@ justify-content: center;}
     margin: 0px;
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    
 
     button{
         flex: 1;
-        padding: 0.2rem 0.2rem;
-        width: 100%;
+        padding: 0.2rem 0.2rem;  
+        min-width: fit-content;     
     }
         
 }
@@ -333,11 +335,11 @@ height: auto;
         display: flex;
         flex-flow: column;
         justify-content: center;
-        width: 100%s;
+        width: fit-content;
 
         button{
             background-color: #ff5a5a;
-            width: 100%;
+            width: fit-content;
         }
     } 
 }
@@ -632,11 +634,12 @@ label.custom-file-upload.file-chosen {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    width: fit-content;
 
     button{
         flex: 1;
         padding: 0.2rem 0.2rem;
-        width: 100%;
+        width: fit-content;
     }
         
 }
