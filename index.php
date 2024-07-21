@@ -30,7 +30,5 @@
             <a href="#">Contact</a>
         </div>
     </footer>
-
 </body>
-
 </html>

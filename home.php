@@ -84,17 +84,17 @@ if (mysqli_num_rows($pResults) == 0) {
             <a href="home.php"><button type="button">All</button></a>
         </div>
 
-        <form method="post">
+        <form id="search-form" onsubmit="return false;">
             <div class="search-input">
                 <input type="text" id="search" placeholder="Search for...">
-                <button type="submit"><i class='bx bxs-search-alt-2'></i></button>
+                <button type="submit" id="submit"><i class='bx bxs-search-alt-2'></i></button>
             </div>
         </form>
 
     </div>
 
-    <div class="grid">
-        <?= $layout ?>
+    <div class="grid" id="result">
+        <?= $layout ?>  
     </div>
 
     <footer>
@@ -105,8 +105,7 @@ if (mysqli_num_rows($pResults) == 0) {
             <a href="#">Contact</a>
         </div>
     </footer>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>

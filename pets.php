@@ -64,7 +64,7 @@ if (mysqli_num_rows($pResults) == 0) {
     <?php require_once "./components/navbar.php" ?>
 
     <div class="grid">
-        <?= $layout ?>     
+        <?= $layout ?>        
     </div>
 
     <footer>
@@ -75,7 +75,7 @@ if (mysqli_num_rows($pResults) == 0) {
             <a href="#">Contact</a>
         </div>
     </footer>
-
+    
 </body>
 
 </html>
