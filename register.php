@@ -39,7 +39,7 @@ if (isset($_POST["register"])) {
     } elseif (!preg_match("/^[a-zA-Z\s]+$/", $first_name)) {
         #php documentation preg-match.php regex quick reference
         $error = true;
-        $fnameError = "Fist name must only contain letters and spaces";
+        $fnameError = "First name must only contain letters and spaces";
     }
 
     if (empty($last_name)) {

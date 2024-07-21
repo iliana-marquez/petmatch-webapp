@@ -438,6 +438,21 @@ height: auto;
     cursor: pointer;
 }
 
+.input-box textarea{
+    appearance: none; /* Remove default styles */
+    -webkit-appearance: none; /* Remove default styles in Safari */
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none; /* Remove outline */
+    width: 100%; /* Adjust as necessary */
+    min-height: auto;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    padding: 5px;
+}
+
 .input-box input[type="file"] {
     display: none;
 }
@@ -485,6 +500,7 @@ label.custom-file-upload.file-chosen {
     color: white;
     font-size: 16px;
     padding: 20px 45px 20px 20px;
+    
 }
 
 .input-box p.error{

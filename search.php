@@ -24,9 +24,9 @@ if(mysqli_num_rows($result) == 0) {
             <p>&#10003; <span>{$pet["pet_size"]}</span></p>
         </div>
         <div class='cardBotones'>
-            <button><a href='pet_details.php?id={$pet["id"]}'><i class='bx bxs-hand-up'></i> Details</a></button>
-            <a href='edit_pet.php?id={$pet["id"]}'><button>Update</button></a>
-            <a href='delete.php?id={$pet["id"]}'><button><i class='bx bxs-trash'></i> Delete</button></a>
+           <button><a href='pet_details.php?id={$pet["id"]}'>+ about me...</a></button>
+            <button><a href='adoption.php?id={$pet["id"]}'>take me home!</a></button>
+            
         </div>
         </div>";
     }

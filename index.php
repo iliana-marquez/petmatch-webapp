@@ -13,21 +13,22 @@
         <img class="logo" src="images/logo.svg" alt="logo">
         <nav class="navLinks">
             <ul>
-                <li><a href="#">Sign In</a></li>
+                <li><a href="register.php">Register</a></li>
             </ul>
         </nav>
-        <a class="" href="#"><button>Match your pet</button></a>
+        <a class="" href="login.php"><button>Match your pet</button></a>
     </header>
     <div class="container">
         <h1>Get ready to meet your matching Pawl!</h1>
-        <button>Find me!</button>
+        <a href="login.php"><button>Find me!</button></a>
+        
     </div>
     <footer>
         <div class="footerNav">
             <a href="#">About</a>
             <a href="#">FAQ</a>
             <a href="#">Privacy</a>
-            <a href="#">Contact</a>
+            <a href="email.php">Contact</a>
         </div>
     </footer>
 </body>
