@@ -108,13 +108,7 @@ if (isset($_POST["login"])) {
             </div>
         </div>
     </div>
-    <footer>
-        <div class="footerNav">
-            <a href="#">About</a>
-            <a href="#">FAQ</a>
-            <a href="#">Privacy</a>
-            <a href="#">Contact</a>
-        </div>
-    </footer>
+    <?php require_once "./components/footer.php" ?>
+
 </body>
 </html>

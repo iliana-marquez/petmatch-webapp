@@ -23,13 +23,6 @@
         <a href="login.php"><button>Find me!</button></a>
         
     </div>
-    <footer>
-        <div class="footerNav">
-            <a href="#">About</a>
-            <a href="#">FAQ</a>
-            <a href="#">Privacy</a>
-            <a href="email.php">Contact</a>
-        </div>
-    </footer>
+    
 </body>
 </html>

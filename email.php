@@ -122,9 +122,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ){
                     </div>
                     <button class="bttn" type="submit" name="send">Send</button>
                 </form>
+                <a href='pets.php'><button class="bttn">Go back</button></a>
             </div>
         </div>
     </div>
+
+    
 
 </body>
 </html>

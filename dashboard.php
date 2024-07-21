@@ -46,14 +46,8 @@ $person = mysqli_fetch_assoc($result);
 
     </div>
 
-    <footer>
-        <div class="footerNav">
-            <a href="#">Back to the Top</a>
-            <a href="#">Edit my Profile</a>
-            <a href="#">FAQ</a>
-            <a href="#">Contact</a>
-        </div>
-    </footer>
+    <?php require_once "./components/footer.php" ?>
+
 
 </body>
 
