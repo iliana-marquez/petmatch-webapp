@@ -23,6 +23,6 @@
         <a href="login.php"><button>Find me!</button></a>
         
     </div>
-    
+    <?php require_once "./components/footer.php" ?>
 </body>
 </html>
