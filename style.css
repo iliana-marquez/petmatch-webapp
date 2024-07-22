@@ -506,6 +506,19 @@ label.custom-file-upload.file-chosen {
     
 }
 
+.input-box select{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    color: white;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
 .input-box p.error{
     color: #ff5a5a;
     font-size: 12px;
