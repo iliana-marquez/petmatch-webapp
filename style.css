@@ -468,19 +468,19 @@ label.custom-file-upload {
     cursor: pointer;
 }
 
-.input-box input[type="number"] {
-    appearance: none; /* Remove default styles */
-    -webkit-appearance: none; /* Remove default styles in Safari */
-}
-.input-box select {
-    appearance: none; /* Remove default styles */
-    -webkit-appearance: none; /* Remove default styles in Safari */
-}
-
 label.custom-file-upload.file-chosen {
     color: white;
 }
 
+.input-box input[type="number"]::-webkit-inner-spin-button,
+.input-box input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-box input[type="number"] {
+    -moz-appearance: textfield;
+}
 
 
 .search-input input[type="text"] {
@@ -517,6 +517,9 @@ label.custom-file-upload.file-chosen {
     color: white;
     font-size: 16px;
     padding-left: 20px;
+    -webkit-appearance: none; /* For Chrome, Safari, and other WebKit browsers */
+    -moz-appearance: none;    /* For Firefox */
+    appearance: none;    
 }
 
 .input-box p.error{

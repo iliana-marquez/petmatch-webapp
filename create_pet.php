@@ -192,6 +192,7 @@ if (isset($_POST["create"])){
                                 <option value="Medium">Medium</option>
                                 <option value="Big">Big</option>
                             </select>
+                            <i class='bx bxs-chevron-down'></i>
                             <p class="error"><?= $sizeError; ?></p>
                         </div>
                         <div class="input-box">
@@ -200,6 +201,7 @@ if (isset($_POST["create"])){
                                 <option value="female">Female</option>
                                 <option value="male">Male</option>
                             </select>
+                            <i class='bx bxs-chevron-down'></i>
                             <p class="error"><?= $genderError; ?></p>
                         </div>
 
@@ -209,6 +211,7 @@ if (isset($_POST["create"])){
                                 <option value="1">Yes</option>
                                 <option value="0">No</option>
                             </select>
+                            <i class='bx bxs-chevron-down'></i>
                             <p class="error"><?= $vaccinesError; ?></p>
                         </div>
 
@@ -218,6 +221,7 @@ if (isset($_POST["create"])){
                                 <option value="1">Yes</option>
                                 <option value="0">No</option>
                             </select>
+                            <i class='bx bxs-chevron-down'></i>
                             <p class="error"><?= $statusError; ?></p>
                         </div>
 
