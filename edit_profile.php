@@ -170,7 +170,14 @@ if (isset($_POST["update"])) {
 
     <?php require_once "./components/footer.php" ?>
 
-
+<script>
+    document.getElementById('file-upload').addEventListener('change', function (){
+           let fileName = this.files[0].name; //get the name of the selcted file
+           let label = document.querySelector('label[for="file-upload"]'); // Get the label associated with the file input
+           label.innerHTML = fileName + '<i class="bx bx-image-add"></i>'; // Update the label text with the file name and icon
+            label.classList.add('file-chosen'); // Add the class to change the text color to white
+        }); 
+</script>
 </body>
 
 </html>

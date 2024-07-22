@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+}
+
+li, a, button {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: flex-end;
+    padding: .5rem 1rem;
+    padding-bottom: 0;
+    background-color: #24252A;
+}
+
+header h1 {
+    margin-right: auto;
+}
+
+.logo {
+    height: 60px;
+    margin-right: auto;
+}
+
+.navLinks {
+    display: inline-block;
+    padding: 0 1.5rem;
+}
+
+.navLinks li a {
+    transition: all 0.3s ease;
+}
+
+.navLinks li a:hover {
+    color: #ff5a5a;
+}
+
+.img-thumbnail {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    height: 50px;
+    width: 50px;
+    margin-left: 1rem;
+}
+
+/* Buttons */
+button {
+    padding: 4px 15px;
+    background-color: #ff5a5a;
+    border: 3px solid transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0.3rem 0;
+}
+
+button:hover {
+    background-color: rgba(255, 90, 90, 1);
+    border: 3px solid white;
+}
+
+/* Container Index */
+.container, .editContainer {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+    min-height: calc(100vh - 105px);
+    padding: 1rem;
+}
+
+.container {
+    background-image: url(images/adopt.jpg);
+}
+
+.editContainer {
+    background-image: url(./images/pet_entry.jpg);
+}
+
+.container h1, .editContainer h1 {
+    color: white;
+    margin: 1.5rem;
+}
+
+.editContainer p {
+    margin-left: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 90, 90, 1);
+    padding: 0.5rem;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerNav {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    gap: 2rem;
+}
+
+.footerNav a:hover {
+    color: #24252A;
+    text-decoration: underline;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    width: 100%;
+    background: linear-gradient(#24252A, #ff5a5a);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    min-height: calc(100vh - 165px);
+}
+
+.card {
+    height: 45vh;
+    min-width: 0;
+    border-image: linear-gradient(rgba(255, 255, 255, 0.001), rgba(255, 255, 255, 0.2), rgba(36, 37, 37, 0.8), rgba(36, 37, 42, 1)) 1 fill;
+    background-position: center;
+    background-size: cover;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0.5, 0.5);
+}
+
+.cardTitle{
+    color: #ff5a5a;
+    font-size: 1.5rem; 
+    text-align: left; 
+}
+
+.cardContent{
+    color: #ff5a5a;
+    margin-bottom: 0.5rem;
+    span {
+        color: white;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Forms */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.wrapperLogin, .wrapperRegister, .wrapperEdit {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    color: white;
+    border-radius: 15px;
+    padding: 30px 40px;
+    margin: 2rem;
+    height: auto;
+}
+
+.wrapperLogin {
+    width: 450px;
+}
+
+.wrapperRegister, .wrapperEdit {
+    width: 85%;
+}
+
+.wrapperRegister h1, .wrapperEdit h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box {
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    text-align: start;
+}
+
+.wrapperLogin .input-box, .wrapperRegister .input-box {
+    margin: 30px 0;
+}
+
+.searchWrapper {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    background-color: #24252A;
+}
+
+.searchWrapper form {
+    width: 100%;
+}
+
+.searchWrapper .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    width: 100%;
+    height: 2.3rem;
+    padding: 0 1.5rem;
+}
+
+.search-input:hover {
+    border: 2px solid rgba(255, 255, 255, 0.796);
+}
+
+.search-input input[type="text"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    flex: 1;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 0.5rem;
+}
+
+.input-box-date, .input-box textarea, .input-box input, .input-box select {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-box-date {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+    margin-top: 1rem;
+}
+
+.custom-date {
+    color: rgba(255, 255, 255, 0.57);
+    font-size: 16px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.input-box input[type="date"], .input-box input[type="number"], .input-box input[type="file"], .input-box select {
+    width: 100%;
+    padding: 5px;
+}
+
+.input-box input::placeholder {
+    color: white;
+    text-align: start;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    font-size: 20px;
+    color: white;
+}
+
+.input-box p.error {
+    color: #ff5a5a;
+    font-size: 12px;
+    text-align: start;
+    margin-left: 1rem;
+}
+
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+label.custom-file-upload {
+    background: transparent;
+    padding: 20px 45px 20px 20px;
+}
+
+.label.custom-file-upload.file-chosen {
+    color: white;
+}
+
+.wrapperLogin .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -15px 0 15px;
+    font-size: 14px;
+}
+
+.wrapperLogin .remember-forgot label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.3rem;
+}
+
+.wrapperLogin .remember-forgot a {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.wrapperLogin .remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.form button {
+    margin: 1rem 0 0.5rem 0;
+}

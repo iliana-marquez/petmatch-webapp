@@ -73,7 +73,7 @@ button{
 }
 
 button:hover{
-    background-color: rgba(255, 90, 90, 1);
+    background-color: #ff5a5a;
     border: 3px solid white;
 }
 
@@ -96,8 +96,7 @@ button:hover{
         rgba(36, 37, 42, 0.35) 70%,
         rgba(36, 37, 42, 0.25) 80%,
         rgba(36, 37, 42, 0.15) 90%,
-        rgba(36, 37, 42, 0.05) 95%,
-        rgba(255, 90, 90, 1) 100%
+        rgba(36, 37, 42, 0.05) 95%
     );
 
     width: 100%;
@@ -133,8 +132,7 @@ button:hover{
         rgba(36, 37, 42, 0.35) 70%,
         rgba(36, 37, 42, 0.25) 80%,
         rgba(36, 37, 42, 0.15) 90%,
-        rgba(36, 37, 42, 0.05) 95%,
-        rgba(255, 90, 90, 1) 100%
+        rgba(36, 37, 42, 0.05) 95%
     );
     
 
@@ -320,16 +318,6 @@ height: auto;
     height: auto;
     justify-content: center;
     
-    .input-box{
-        width: 100%;
-        height: 4rem;
-        margin-top: 1rem;
-        position: relative;
-        display: flex;
-        flex-flow: column;
-        text-align: start;
-    }
-
     .bttn-section{
         margin-top: 1rem;
         display: flex;
@@ -342,6 +330,16 @@ height: auto;
             width: fit-content;
         }
     } 
+}
+
+.input-box{
+    width: 100%;
+    height: 4rem;
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    text-align: start;
 }
 
 .wrapperLogin .input-box{
@@ -471,7 +469,12 @@ label.custom-file-upload {
 }
 
 .input-box input[type="number"] {
-    display: none;
+    appearance: none; /* Remove default styles */
+    -webkit-appearance: none; /* Remove default styles in Safari */
+}
+.input-box select {
+    appearance: none; /* Remove default styles */
+    -webkit-appearance: none; /* Remove default styles in Safari */
 }
 
 label.custom-file-upload.file-chosen {

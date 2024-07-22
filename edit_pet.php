@@ -181,7 +181,6 @@ if (isset($_POST["update"])){
                             <p class="error"><?= $breedError; ?></p>
                         </div>
                         <div class="input-box">
-
                             <input type="number" placeholder="* Age (current: <?= $pet["pet_age"]; ?>)" name="age"><i class='bx bxs-calendar-heart'></i>
                             <p class="error"><?= $ageError; ?></p>
                         </div>
@@ -234,7 +233,7 @@ if (isset($_POST["update"])){
                         </div>
                         <div class="input-box">
                             <input id="file-upload" type="file" name="picture">
-                            <label for="file-upload" class=""><i class='bx bx-image-add'></i></label>
+                            <label for="file-upload" class="input custom-file-upload"><i class='bx bx-image-add'></i></label>
                         </div>
                     </div>
                     <button class="bttn" type="submit" name="update">Update Entry</button>
@@ -243,9 +242,9 @@ if (isset($_POST["update"])){
             </div>
         </div>
     </div>
-    
-    <?php require_once "./components/footer.php" ?>
 
+    <?php require_once "./components/footer.php" ?>
+    
 
 </body>
 
