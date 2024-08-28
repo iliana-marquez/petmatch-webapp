@@ -18,28 +18,25 @@ $result = mysqli_query($conn, $sql);
 $person = mysqli_fetch_assoc($result);
 
 
-$sqlAdoptions = "SELECT adoptions.*, users.picture AS user_picture, pets.picture AS pet_picture
-                 FROM `adoptions` 
-                 JOIN `users` ON adoptions.fk_user = users.id 
-                 JOIN `pets` ON adoptions.fk_pet = pets.id";
-$aResults = mysqli_query($conn, $sqlAdoptions);
+$sqlUsers = "SELECT * FROM `users`";
+$uResults = mysqli_query($conn, $sqlUsers);
 $layout = "";
 
 
-if (mysqli_num_rows($aResults) == 0) {
+if (mysqli_num_rows($uResults) == 0) {
     $layout = "No pets found";
 } else {
-    $rows = mysqli_fetch_all($aResults, MYSQLI_ASSOC);
-    foreach ($rows as $adoption) {
+    $rows = mysqli_fetch_all($uResults, MYSQLI_ASSOC);
+    foreach ($rows as $user) {
         $layout .= "
             <tr>
-                
-                <td>{$adoption["adoption_date"]}</td>
-                <td>{$adoption["adoption_location"]}</td>
-                <td><img src='./images/{$adoption["user_picture"]}' style='height: 8vh;' alt=''></td>
-                <td><i class='bx bx-home-heart'></i></td>
-                <td><img src='./images/{$adoption["pet_picture"]}' style='height: 8vh;' alt=''></td>
-                
+                <td><img src='./images/{$user["picture"]}' style='height: 8vh;' alt=''></td>
+                <td>{$user["id"]}</td>
+                <td>{$user["first_name"]}</td>
+                <td>{$user["last_name"]}</td>
+                <td>{$user["email"]}</td>
+                <td>{$user["phone_number"]}</td>
+                <td>{$user["status"]}</td>
             </tr>   
         ";
     }
@@ -69,11 +66,13 @@ if (mysqli_num_rows($aResults) == 0) {
         <table class="table">
             <thead>
                 <tr class="text-center">
-                    <th>DATE</th>
-                    <th>LOCATION</th>
-                    <th>USER</th>
-                    <th><i class='bx bx-home-heart'></i></th>
-                    <th>PET</th>
+                    <th>Profile</th>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>SURNAME</th>
+                    <th>EMAIL</th>
+                    <th>PHONE</th>
+                    <th>STATUS</th>
                 </tr>
             </thead>
 

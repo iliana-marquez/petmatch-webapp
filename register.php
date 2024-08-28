@@ -148,7 +148,7 @@ if (isset($_POST["register"])) {
                 <li><p>Get ready to match your pet!</p></li>
             </ul>
         </nav>
-        <a href="login.php"><button>Login</button></a>
+        <a href="login.php"><button><i class='bx bx-log-in'></i></button></a>
     </header>
     <div class="container">
         <div class="form">

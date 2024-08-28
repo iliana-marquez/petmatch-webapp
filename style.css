@@ -170,7 +170,7 @@ footer{
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     padding: 1.5rem;
-    min-height:calc(100vh - 165px);
+    min-height:calc(100vh - 100px);
 }
 
 
@@ -689,13 +689,59 @@ label.custom-file-upload.file-chosen {
 }
 
 #successAlert {
-    background-color: #1b531d; /* Green background for success */
-    border: 2px solid #3e8e41; /* Darker green border */
+    background-color: #1fae24; /* Green background for success */
+    border: 2px solid #01d308; /* Darker green border */
 }
 
 #errorAlert {
     background-color: #e94d42; /* Red background for error */
     border: 2px solid #d32f2f; /* Darker red border */
 }
+
+/* USERS TABLE */
+.userContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(#24252A, #ff5a5a);
+    padding: 1.5rem;
+    min-height:calc(100vh - 100px);
+}
+
+
+.table {
+    width: 90%; 
+    background: rgba(255, 255, 255, 0.1); 
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.table th {
+    color: #ff5a5a;
+    font-size: 18px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.table td {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    
+}
+
+.table img{
+    border-radius: 50%; 
+    position: center;
+    object-fit: cover;
+    object-position: center;
+    width: 5.5rem;
+}
+
 
 

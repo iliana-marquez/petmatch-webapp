@@ -69,6 +69,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ){
     
     if (mail($myEmail, $subject, $message, $headers)) {
         echo "Email sent successfully!";
+        header("refresh: 1; url=home.php");
       
     } else {
         echo "Failed to send email.";

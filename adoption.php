@@ -52,9 +52,10 @@ if (isset($_GET['id'])) {
 
             echo "<div class='alert' id='successAlert'><h1>Congratulations, {$person['first_name']}! You just adopted {$pet['pet_name']}!</h1></div>";
 
+            header("refresh: 1; url=home.php");
             $adoption_location = "";
             
-            header("refresh: 1; url=home.php");
+            
         } else {
             echo "<div class='alert' id='errorAlert'>Something went wrong. Please try again later</div>";
         }

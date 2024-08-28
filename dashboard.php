@@ -38,9 +38,10 @@ $person = mysqli_fetch_assoc($result);
         <div class="form">
             <div class="wrapperRegister">
                 <h2>Please select the desired records to work on</h2>
-                <div class="bttn-section">
-                    <a href="pets.php"><button class="bttn" type="button">Pets</button></a>                    <button class="bttn" type="submit">Users</button>
-                    <button class="bttn" type="submit">Adoptions</button>
+                <div class="bttn-section dashbrd">
+                    <a href="pets.php"><button class="bttn circle" type="button">Pets</button></a>                    
+                    <a href="users.php"><button class="bttn circle" type="submit">Users</button></a>                    
+                    <a href="adoptions.php"><button class="bttn circle" type="submit">Adoptions</button></a>                                        
                 </div>
             </div>
         </div>
