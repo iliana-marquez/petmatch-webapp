@@ -61,9 +61,12 @@ if (mysqli_num_rows($uResults) == 0) {
 <body>
     <?php require_once "components/navbar.php" ?>
 
-    <div class="userContainer">
+    
 
+    <div class="userContainer">
+   
         <table class="table">
+            
             <thead>
                 <tr class="text-center">
                     <th>Profile</th>

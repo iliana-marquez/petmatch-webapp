@@ -112,6 +112,7 @@ button:hover{
 }
 
 .editContainer{
+    width: 100vw;
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-image: url(./images/pet_entry.jpg);
@@ -119,6 +120,12 @@ button:hover{
     background-size: cover;
     min-height:calc(100vh - 105px);
     background-attachment: fixed; 
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    min-height:calc(100vh - 105px);
+
     border-image-width: 1px;
     border-image-slice: 1 fill;
       border-image-source: linear-gradient(

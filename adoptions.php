@@ -33,11 +33,9 @@ if (mysqli_num_rows($aResults) == 0) {
     foreach ($rows as $adoption) {
         $layout .= "
             <tr>
-                
+                <td><img src='./images/{$adoption["user_picture"]}' style='height: 8vh;' alt=''></td>
                 <td>{$adoption["adoption_date"]}</td>
                 <td>{$adoption["adoption_location"]}</td>
-                <td><img src='./images/{$adoption["user_picture"]}' style='height: 8vh;' alt=''></td>
-                <td><i class='bx bx-home-heart'></i></td>
                 <td><img src='./images/{$adoption["pet_picture"]}' style='height: 8vh;' alt=''></td>
                 
             </tr>   
@@ -55,7 +53,7 @@ if (mysqli_num_rows($aResults) == 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users</title>
+    <title>Adoptions</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
@@ -69,10 +67,9 @@ if (mysqli_num_rows($aResults) == 0) {
         <table class="table">
             <thead>
                 <tr class="text-center">
+                    <th>USER</th>
                     <th>DATE</th>
                     <th>LOCATION</th>
-                    <th>USER</th>
-                    <th><i class='bx bx-home-heart'></i></th>
                     <th>PET</th>
                 </tr>
             </thead>
