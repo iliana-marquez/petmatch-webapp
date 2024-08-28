@@ -160,6 +160,7 @@ if (isset($_POST["update"])){
     <title>Edit Pet Entry</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
 </head>
 
 <body>

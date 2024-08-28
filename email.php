@@ -69,6 +69,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ){
     
     if (mail($myEmail, $subject, $message, $headers)) {
         echo "Email sent successfully!";
+      
     } else {
         echo "Failed to send email.";
     }
@@ -87,6 +88,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ){
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     
 </head>
 <body>
@@ -116,8 +118,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ){
                         <p class="error"><?= $subjectError; ?></p>
                     </div>
                     <div class="input-box" style="margin-bottom: 3rem">
-                        <label for="email">Your email address</label>
-                        <textarea type="text" id="email" placeholder="* write your email" name="message"></textarea>
+                        <label for="message">Your message</label>
+                        <textarea type="text" id="message" placeholder="* write your message" name="message"></textarea>
                         <p class="error"><?= $messageError; ?></p>
                     </div>
                     <button class="bttn" type="submit" name="send">Send</button>

@@ -80,6 +80,7 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoption Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
