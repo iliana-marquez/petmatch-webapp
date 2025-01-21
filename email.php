@@ -68,15 +68,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ){
     $myEmail = "iliana.marquez@hotmail.com";
     
     if (mail($myEmail, $subject, $message, $headers)) {
-        echo "Email sent successfully!";
-        header("refresh: 1; url=home.php");
-      
+        echo "<div class='alert' id='successAlert'><h1>Thanks for your email {$fname}! We'll get back at you ASAP!</h1></div>";
+        header("refresh: 2; url=home.php");      
     } else {
         echo "Failed to send email.";
     }
-
-
-
 }
 
 ?>
@@ -97,7 +93,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" ){
         <div class="form">
             <div class="wrapperEdit">
                 <h1>Send us an email!</h1>
-                <form method="post">
+                <form method="POST">
                 <div class="input-box">
                         <p>First Name</p>
                         <input type="text" placeholder="* First Name"  name="first_name">
