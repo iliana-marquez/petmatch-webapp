@@ -44,7 +44,8 @@ header{
     margin-right: auto;
 }
 
-#navigation {
+#navigation,
+.navLinks {
     display: flex;
     align-items: center;
     gap: 0rem 1rem;
