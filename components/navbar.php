@@ -9,15 +9,15 @@ if ($id) {
 ?>
 <header>
     <img class="logo" src="images/logo.svg" alt="logo">
-    <a>Hi, <?= $person["first_name"]; ?>!</a>
-    <img class="img-thumbnail" src="images/<?= $person["picture"] ?>">
-
+    
     <nav class="navLinks">
+        <a>Hi, <?= $person["first_name"]; ?>!</a>
+        <img class="img-thumbnail" src="images/<?= $person["picture"] ?>">
         <?php if (isset($_SESSION["admn"])): ?>
             <a href="create_pet.php"><button class="bttn" type="button"><i class='bx bxs-dog'></i><i class='bx bx-plus' ></i></button></a>
             <a href="dashboard.php"><button class="bttn" type="button">Dashboard</button></a>
         <?php endif; ?>
         <a id="profilePic" href="edit_profile.php"><button>My account</button></a>
+        <a class="" href="./logout.php?logout"><button>Logout</button></a>
     </nav>
-    <a class="" href="./logout.php?logout"><button>Logout</button></a>
 </header>
