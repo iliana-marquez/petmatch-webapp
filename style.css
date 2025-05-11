@@ -374,11 +374,10 @@ height: auto;
 
 .searchWrapper {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     padding: .5rem 1rem .5rem 1rem;
     background-color: #24252A;
-    
 }
 
 .searchWrapper form {
@@ -388,8 +387,8 @@ height: auto;
 .searchWrapper .buttons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
     width: 100%;
+    gap: 1rem;
 
     button {
         font-size: 12px;
@@ -626,14 +625,15 @@ label.custom-file-upload.file-chosen {
         margin-bottom: 20px; 
         margin-top: 0;
     }
-
-
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
     .input-grid {
         grid-template-columns: 1fr 1fr; 
         gap: 0 0.5rem; 
+    }
+    .searchWrapper {
+        flex-wrap: nowrap;
     }
 
     
@@ -643,6 +643,9 @@ label.custom-file-upload.file-chosen {
     .input-grid {
         grid-template-columns: 1fr 1fr; 
         gap: 0 0.5rem; 
+    }
+    .searchWrapper {
+        flex-wrap: nowrap;
     }
 
     
