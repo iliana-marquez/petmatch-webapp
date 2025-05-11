@@ -18,13 +18,15 @@ li, a, button{
 /* Navbar */
 header{
     display: flex;
+    flex-wrap: wrap;
     color: white;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding: .5rem 1rem .5rem 1rem;
     padding-bottom: 0;
     background-color: #24252A ;
     height: auto;
+    gap: 0rem 1rem;
    
 
     h1{
@@ -39,9 +41,10 @@ header{
 
 .navLinks {
     display: flex;
-    padding: 0px 1.5rem;
     align-items: center;
-    gap: 1rem;
+    gap: 0rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .navLinks li a{
