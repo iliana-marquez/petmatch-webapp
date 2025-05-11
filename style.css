@@ -21,7 +21,7 @@ header{
     flex-wrap: wrap;
     color: white;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: .5rem 1rem .5rem 1rem;
     padding-bottom: 0;
     background-color: #24252A ;
@@ -34,12 +34,17 @@ header{
     }
 }
 
+#logo {
+    display: inline;
+    justify-content: start;
+}
+
 .logo{
     height: 60px;
     margin-right: auto;
 }
 
-.navLinks {
+#navigation {
     display: flex;
     align-items: center;
     gap: 0rem 1rem;
