@@ -18,13 +18,15 @@ li, a, button{
 /* Navbar */
 header{
     display: flex;
+    flex-wrap: wrap;
     color: white;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: .5rem 1rem .5rem 1rem;
     padding-bottom: 0;
     background-color: #24252A ;
     height: auto;
+    gap: 0rem 1rem;
    
 
     h1{
@@ -32,16 +34,23 @@ header{
     }
 }
 
+#logo {
+    display: inline;
+    justify-content: start;
+}
+
 .logo{
     height: 60px;
     margin-right: auto;
 }
 
+#navigation,
 .navLinks {
     display: flex;
-    padding: 0px 1.5rem;
     align-items: center;
-    gap: 1rem;
+    gap: 0rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .navLinks li a{
@@ -366,11 +375,10 @@ height: auto;
 
 .searchWrapper {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     padding: .5rem 1rem .5rem 1rem;
     background-color: #24252A;
-    
 }
 
 .searchWrapper form {
@@ -380,8 +388,8 @@ height: auto;
 .searchWrapper .buttons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
     width: 100%;
+    gap: 1rem;
 
     button {
         font-size: 12px;
@@ -530,7 +538,8 @@ label.custom-file-upload.file-chosen {
     appearance: none;    
 }
 
-.input-box p.error{
+.input-box p.error,
+.date-input p.error {
     color: #ff5a5a;
     font-size: 12px;
     text-align: start;
@@ -618,14 +627,15 @@ label.custom-file-upload.file-chosen {
         margin-bottom: 20px; 
         margin-top: 0;
     }
-
-
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
     .input-grid {
         grid-template-columns: 1fr 1fr; 
         gap: 0 0.5rem; 
+    }
+    .searchWrapper {
+        flex-wrap: nowrap;
     }
 
     
@@ -635,6 +645,9 @@ label.custom-file-upload.file-chosen {
     .input-grid {
         grid-template-columns: 1fr 1fr; 
         gap: 0 0.5rem; 
+    }
+    .searchWrapper {
+        flex-wrap: nowrap;
     }
 
     

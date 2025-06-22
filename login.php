@@ -80,7 +80,7 @@ if (isset($_POST["login"])) {
                 <li><p>Only one click to match your pet!<p></li>
             </ul>
         </nav>
-        <a href="register.php"><button>Register now</button></a>
+        <a href="register.php"><button>Register</button></a>
     </header>
     <div class="container">
         <div class="form">
