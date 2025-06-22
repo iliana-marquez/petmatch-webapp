@@ -538,7 +538,8 @@ label.custom-file-upload.file-chosen {
     appearance: none;    
 }
 
-.input-box p.error{
+.input-box p.error,
+.date-input p.error {
     color: #ff5a5a;
     font-size: 12px;
     text-align: start;

@@ -180,9 +180,11 @@ if (isset($_POST["register"])) {
                             <input type="text" placeholder="* Phone Number" name="phone_number"><i class='bx bxs-phone'></i></i>
                             <p class="error"><?= $phoneError; ?></p>
                         </div>
-                        <div class="input-box-date">
-                            <label for="date" class="custom-date">* Date of Birth: </label>
-                            <input id="date" type="date" name="date_of_birth">
+                        <div class="date-input">
+                            <div class="input-box-date">
+                                <label for="date" class="custom-date">* Date of Birth: </label>
+                                <input id="date" type="date" name="date_of_birth">
+                            </div>
                             <p class="error"><?= $dateError; ?></p>
                         </div>
                         <div class="input-box">
