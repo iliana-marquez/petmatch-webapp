@@ -13,7 +13,7 @@
 3. [Getting Started](#-getting-started)
 4. [Project Structure](#-project-structure)
 5. [Security Notes](#-security-notes)
-6. [Screenshots](#-screenshots)
+6. [Some visuals of this webapp](#-some-visuals-of-this-webapp)
 7. [Road‑map & Future Work](#-road‑map--future-work)
 8. [Contributing](#-contributing)
 9. [License & Credits](#-license--credits)
@@ -144,5 +144,5 @@ Have another idea? [Open an issue](https://github.com/iliana-marquez/petmatch-we
 
 ## 📝 License & Credits
 
-Built with love by **Iliana Marquez** – full-stack developer and UI/UX designer of this project  - connect on [LinkedIn](https://www.linkedin.com/in/iliana-marquez/) 💜
+Built with love by **Iliana Márquez** – full-stack developer and UI/UX designer of this project  - connect on [LinkedIn](https://www.linkedin.com/in/iliana-marquez-3b6795339/) 💜
 
