@@ -2,7 +2,7 @@
 **Find the perfect paw‑tnership for pets who need a loving home.**
 
 ![Screenshot of the main user page](/images/Screenshot%202025-06-25%20at%2018.04.15.png)
-> Live **▶︎** [https://iliana.codefactory.live/pet\_match/](https://iliana.codefactory.live/pet_match/)
+> [Live Demo](https://ilianamarquez.com/petmatch/)
 
 ---
 
